@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    background-color: rgb(168, 234, 101);
+    overflow: hidden;
+    gap:2rem;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1rem
+}
+
+button{
+    width:5rem;
+    font-size: large;
+    font-weight: 600;
+    padding: 1rem 1rem;
+    margin:1.2rem 0.8rem;
+    border:2px solid rgb(15, 14, 14);
+    cursor:pointer;
+    overflow: hidden;
+    transition: all 0.5 ease;
+}
+
+button:hover{
+    background: linear-gradient(220.55deg,#D0004B,#88069D,100%);
+    color:#FFEAF6;
+}
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+
+    <link rel='stylesheet' href="{{url_for('static',filename='animal_identification.css')}}">
+
+    <title>Wildlife Image Detection</title>
+
+</head>
+<body>
+    <main>
+        
+        <h1>Wildlife Image Detection</h1>
+            <form action='/upload' method='post' enctype="multipart/form-data">
+                <div class="container">
+                    <div class='inputbox'>
+                        <input type='file' name='file' accept="image/*">
+                    </div>
+                    <button type="submit"><span>Upload</span></button>
+                </div>
+            </form>
+
+        {%if prediction%}
+            <div class="result" id='resultBox'>
+                <h2>Prediction Result</h2>
+                <img src="{{url_for('static',filename='save_files_warehouse/')+ image_file}}"
+                    alt="Upload Image" width='200'>
+
+                <p><strong>Animals:</strong>{{prediction}}</p>
+                <p><strong>Confidence:</strong>{{Confidence}}%</p>
+            </div>
+        {%endif%}
+    </main>
+</body>
+<script>
+    const fileInput=document.querySelector('input[type="file"]');
+    const resultBox=document.getElementById('resultBox');
+
+    fileInput.addEventListener('change',()=>{
+        if (resultBox){
+            resultBox.style.display="none";
+        }
+    });
+</script>
+</html>

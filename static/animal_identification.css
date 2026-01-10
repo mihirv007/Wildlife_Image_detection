@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;    
+}
+
+body{
+    height:100dvh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-image:url(stacked-steps-haikei.svg);
+    overflow: hidden;
+}
+
+
+
+.container{
+    width:clamp(300px,50vw,800px);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+.inputbox{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:4rem;
+    background: #249E94;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.9) 0px 2px 8px 0px;
+
+    gap:1rem;
+}
+
+input{
+    width:100%;
+}
+
+button{
+    width:50%;
+    font-size: large;
+    font-weight: 600;
+    padding: 1rem ;
+    border:2px solid #0c7779;
+    cursor:pointer;
+    transition: all 0.7s ease;
+    background-color: black;
+    color:#0c7779;
+}
+
+button:hover{
+    background: linear-gradient(220.55deg,#0c7779 0%,#3BC1A8 100%);
+    color:rgb(45, 45, 45);
+    border:2px solid black;
+}
+
+

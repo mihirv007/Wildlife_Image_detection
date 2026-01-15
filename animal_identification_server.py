@@ -21,7 +21,6 @@ def upload_file():
     return render_template('animal_indentification.html')
 
 @app.route('/upload',methods=['POST'])
-
 def upload_image():
     if 'file' not in request.files:
         return 'no file part'

@@ -3,6 +3,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import os
+import sys
 
 #load the model ,model 1.0 accuracy: 90%
 

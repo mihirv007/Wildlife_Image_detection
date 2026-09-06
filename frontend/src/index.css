@@ -253,77 +253,6 @@ ul, ol {
 
 /* --- Responsive --- */
 
-/* --- All Buttons styled like the primary "Start Detecting" button (Uiverse.io effect by e-coders) --- */
-button,
-a.hero__cta,
-a.navbar__cta,
-.upload__detect-btn,
-.upload__reset-btn,
-.upload__button,
-.uiverse-btn {
- appearance: none;
- background-color: #00ff88;
- border: 0.125em solid #00ff88;
- border-radius: 0.9375em;
- box-sizing: border-box;
- color: #051007;
- cursor: pointer;
- display: inline-flex;
- align-items: center;
- justify-content: center;
- gap: 0.5rem;
- font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
- font-size: 16px;
- font-weight: 700;
- line-height: normal;
- margin: 0;
- min-height: 3.25em;
- min-width: 0;
- outline: none;
- padding: 0.9em 2.2em;
- text-align: center;
- text-decoration: none;
- box-shadow: rgba(0, 255, 136, 0.3) 0 4px 18px;
- transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
- user-select: none;
- -webkit-user-select: none;
- touch-action: manipulation;
- will-change: transform;
-}
-
-button:disabled,
-.upload__detect-btn:disabled {
- pointer-events: none;
- opacity: 0.5;
- box-shadow: none;
-}
-
-button:hover:not(:disabled),
-a.hero__cta:hover,
-a.navbar__cta:hover,
-.upload__detect-btn:not(:disabled):hover,
-.upload__reset-btn:hover,
-.upload__button:hover,
-.uiverse-btn:hover {
- color: #051007 !important;
- background-color: #00ff88 !important;
- border-color: #00ff88 !important;
- filter: brightness(1.08);
- box-shadow: rgba(0, 255, 136, 0.55) 0 8px 25px !important;
- transform: translateY(-2px) !important;
-}
-
-button:active:not(:disabled),
-a.hero__cta:active,
-a.navbar__cta:active,
-.upload__detect-btn:not(:disabled):active,
-.upload__reset-btn:active,
-.upload__button:active,
-.uiverse-btn:active {
- box-shadow: none !important;
- transform: translateY(0) !important;
-}
-
 @media (max-width: 768px) {
   :root {
     --text-5xl: 2.5rem;
@@ -344,5 +273,3 @@ a.navbar__cta:active,
     --text-4xl: 1.75rem;
   }
 }
-
-

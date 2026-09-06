@@ -128,7 +128,27 @@
 }
 
 .hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-2xl);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--text-base);
   text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.hero__cta--primary {
+  background: linear-gradient(135deg, var(--color-accent-dim), var(--color-accent));
+  color: var(--color-bg-primary);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.2);
+}
+
+.hero__cta--secondary {
+  border: 1.5px solid var(--color-border-hover);
+  color: var(--color-accent);
+  background: rgba(0, 255, 136, 0.05);
 }
 
 /* Stats Preview */

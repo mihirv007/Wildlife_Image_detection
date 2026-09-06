@@ -93,6 +93,7 @@
   margin-bottom: var(--space-xl);
   letter-spacing: -1px;
   perspective: 500px;
+  color: #c9ded2;
 }
 
 .hero__title-word {
@@ -110,7 +111,7 @@
 /* Subtitle */
 .hero__subtitle {
   font-size: var(--text-lg);
-  color: var(--color-text-secondary);
+  color: #6d8e7c;
   line-height: 1.8;
   margin-bottom: var(--space-2xl);
   max-width: 650px;

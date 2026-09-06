@@ -1,0 +1,7 @@
+{
+  "name": "wildlife-image-detection",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --prefix frontend"
+  }
+}

@@ -103,11 +103,7 @@ export default function HeroSection() {
         >
           <motion.a
             href="#upload"
-            className="hero__cta hero__cta--primary"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: '0 0 40px rgba(0,255,136,0.35)',
-            }}
+            className="hero__cta hero__cta--primary btn-style1"
             whileTap={{ scale: 0.95 }}
           >
             <span>Start Detecting</span>
@@ -118,11 +114,7 @@ export default function HeroSection() {
 
           <motion.a
             href="#how-it-works"
-            className="hero__cta hero__cta--secondary"
-            whileHover={{
-              scale: 1.05,
-              borderColor: 'rgba(0,255,136,0.5)',
-            }}
+            className="hero__cta hero__cta--secondary btn-style1"
             whileTap={{ scale: 0.95 }}
           >
             Learn More

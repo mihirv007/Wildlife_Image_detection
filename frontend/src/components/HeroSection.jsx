@@ -129,28 +129,6 @@ export default function HeroSection() {
           </motion.a>
           </motion.div>
 
-        {/* Stats preview */}
-        <motion.div
-          className="hero__stats-preview"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-        >
-          <div className="hero__stat-item">
-            <span className="hero__stat-value accent">90%</span>
-            <span className="hero__stat-label">Accuracy</span>
-          </div>
-          <div className="hero__stat-divider" />
-          <div className="hero__stat-item">
-            <span className="hero__stat-value accent">5</span>
-            <span className="hero__stat-label">Species</span>
-          </div>
-          <div className="hero__stat-divider" />
-          <div className="hero__stat-item">
-            <span className="hero__stat-value accent">&lt;1s</span>
-            <span className="hero__stat-label">Detection</span>
-          </div>
-        </motion.div>
       </motion.div>
 
 

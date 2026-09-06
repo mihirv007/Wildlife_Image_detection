@@ -98,3 +98,12 @@ wandb/
 
 # Byte-compiled / cached
 *.pyc
+
+# macOS archive metadata
+__MACOSX/
+
+# Keras model files
+*.keras
+
+# Uploaded files warehouse
+static/save_files_warehouse/

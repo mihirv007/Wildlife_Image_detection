@@ -93,11 +93,12 @@
   margin-bottom: var(--space-xl);
   letter-spacing: -1px;
   perspective: 500px;
-  color: #c9ded2;
+  color: #000000;
 }
 
 .hero__title-word {
   display: inline-block;
+  color: #000000;
 }
 
 .hero__title .accent {
@@ -111,7 +112,7 @@
 /* Subtitle */
 .hero__subtitle {
   font-size: var(--text-lg);
-  color: #6d8e7c;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.8;
   margin-bottom: var(--space-2xl);
   max-width: 650px;

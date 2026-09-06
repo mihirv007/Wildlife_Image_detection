@@ -55,15 +55,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <motion.a
-          href="#upload"
-          className="navbar__cta"
-          whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(0,255,136,0.3)' }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Try Now
-        </motion.a>
-
         {/* Mobile hamburger */}
         <button
           className={`navbar__hamburger ${mobileOpen ? 'open' : ''}`}
@@ -94,13 +85,6 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#upload"
-              className="navbar__cta navbar__cta--mobile"
-              onClick={() => setMobileOpen(false)}
-            >
-              Try Now
-            </a>
           </motion.div>
         )}
       </AnimatePresence>

@@ -256,7 +256,6 @@ ul, ol {
 /* --- From Uiverse.io by e-coders (Applied to all buttons) --- */
 button:not(.navbar__hamburger),
 a.hero__cta,
-a.navbar__cta,
 .upload__detect-btn,
 .upload__reset-btn,
 .upload__button {
@@ -289,14 +288,6 @@ a.navbar__cta,
  will-change: transform;
 }
 
-/* Preserve original compact size for the "Try Now" navbar button */
-a.navbar__cta {
- min-height: auto !important;
- padding: 0.45em 1.25em !important;
- font-size: 14px !important;
- border-radius: var(--radius-full, 9999px) !important;
-}
-
 /* Ensure Start Detecting and Learn More have identical border styling */
 .hero__cta--primary,
 .hero__cta--secondary {
@@ -311,7 +302,6 @@ button:disabled,
 
 button:not(.navbar__hamburger):hover:not(:disabled),
 a.hero__cta:hover,
-a.navbar__cta:hover,
 .upload__detect-btn:not(:disabled):hover,
 .upload__reset-btn:hover,
 .upload__button:hover {
@@ -324,7 +314,6 @@ a.navbar__cta:hover,
 
 button:not(.navbar__hamburger):hover:not(:disabled) *,
 a.hero__cta:hover *,
-a.navbar__cta:hover *,
 .upload__detect-btn:not(:disabled):hover *,
 .upload__reset-btn:hover *,
 .upload__button:hover * {
@@ -334,7 +323,6 @@ a.navbar__cta:hover *,
 
 button:not(.navbar__hamburger):active:not(:disabled),
 a.hero__cta:active,
-a.navbar__cta:active,
 .upload__detect-btn:not(:disabled):active,
 .upload__reset-btn:active,
 .upload__button:active {

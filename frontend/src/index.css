@@ -1,0 +1,275 @@
+/* ============================================
+   WILDLIFE IMAGE DETECTION — DESIGN SYSTEM
+   60-30-10 Color Rule + Chubbo / Supreme Fonts
+   ============================================ */
+
+/* --- Design Tokens --- */
+:root {
+  /* ===== 60-30-10 COLOR SYSTEM =====
+     60% — Deep dark base (backgrounds, large areas)
+     30% — Forest mid-tone (cards, sections, secondary surfaces)
+     10% — Emerald accent (CTAs, highlights, glow, key text)
+  */
+
+  /* 60% — Dominant Dark Base */
+  --color-bg-primary: #050a07;
+  --color-bg-secondary: #0a1510;
+
+  /* 30% — Secondary Forest Surfaces */
+  --color-bg-tertiary: #132b20;
+  --color-bg-card: rgba(19, 43, 32, 0.55);
+  --color-bg-glass: rgba(19, 43, 32, 0.3);
+  --color-surface: #1a3a2a;
+  --color-surface-hover: #22503a;
+
+  /* 10% — Accent Emerald (used sparingly!) */
+  --color-accent: #00FF88;
+  --color-accent-dim: #10B981;
+  --color-accent-glow: rgba(0, 255, 136, 0.12);
+  --color-accent-glow-strong: rgba(0, 255, 136, 0.25);
+
+  /* Supporting accent */
+  --color-amber: #F59E0B;
+  --color-amber-glow: rgba(245, 158, 11, 0.12);
+
+  /* Borders */
+  --color-border: rgba(0, 255, 136, 0.1);
+  --color-border-hover: rgba(0, 255, 136, 0.25);
+
+  /* Text — mapped to the 60/30/10 hierarchy */
+  --color-text-primary: #e8f5ee;
+  --color-text-secondary: #9cb8a9;
+  --color-text-muted: #5a7d6a;
+
+  /* Typography — Chubbo for headings, Supreme for body */
+  --font-heading: 'Chubbo', sans-serif;
+  --font-body: 'Supreme', sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.5rem;
+  --text-6xl: 4.5rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* Borders & Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-glow: 0 0 20px rgba(0, 255, 136, 0.12);
+  --shadow-glow-strong: 0 0 40px rgba(0, 255, 136, 0.2);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 16px 64px rgba(0, 0, 0, 0.6);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* --- CSS Reset --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* --- Utility Classes --- */
+
+/* Glassmorphism */
+.glass {
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+}
+
+.glass-strong {
+  background: rgba(13, 31, 23, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--color-border);
+}
+
+/* Glow Effects */
+.glow-text {
+  text-shadow: 0 0 20px var(--color-accent-glow-strong),
+               0 0 40px var(--color-accent-glow);
+}
+
+.glow-border {
+  box-shadow: var(--shadow-glow),
+              inset 0 0 20px rgba(0, 255, 136, 0.05);
+}
+
+.glow-border-hover:hover {
+  box-shadow: var(--shadow-glow-strong),
+              inset 0 0 30px rgba(0, 255, 136, 0.08);
+  border-color: var(--color-border-hover);
+}
+
+/* Section Layout */
+.section {
+  padding: var(--space-5xl) var(--space-xl);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--color-text-primary);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: var(--text-lg);
+  max-width: 600px;
+  margin: 0 auto var(--space-3xl);
+  line-height: 1.7;
+}
+
+/* Accent text */
+.accent {
+  color: var(--color-accent);
+}
+
+.accent-amber {
+  color: var(--color-amber);
+}
+
+/* --- Keyframe Animations --- */
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes border-glow-pulse {
+  0%, 100% { border-color: rgba(0, 255, 136, 0.15); }
+  50% { border-color: rgba(0, 255, 136, 0.4); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-surface-hover);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+  :root {
+    --text-5xl: 2.5rem;
+    --text-6xl: 3rem;
+    --text-4xl: 2rem;
+    --text-3xl: 1.5rem;
+  }
+
+  .section {
+    padding: var(--space-3xl) var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --text-5xl: 2rem;
+    --text-6xl: 2.5rem;
+    --text-4xl: 1.75rem;
+  }
+}

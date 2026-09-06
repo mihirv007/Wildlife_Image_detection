@@ -253,6 +253,95 @@ ul, ol {
 
 /* --- Responsive --- */
 
+/* --- From Uiverse.io by e-coders (Applied to all buttons) --- */
+button:not(.navbar__hamburger),
+a.hero__cta,
+a.navbar__cta,
+.upload__detect-btn,
+.upload__reset-btn,
+.upload__button {
+ appearance: none;
+ background-color: transparent;
+ border: 0.125em solid #00ff88;
+ border-radius: 0.9375em;
+ box-sizing: border-box;
+ color: #ffffff;
+ cursor: pointer;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 0.5rem;
+ font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+ font-size: 16px;
+ font-weight: 600;
+ line-height: normal;
+ margin: 0;
+ min-height: 3.75em;
+ min-width: 0;
+ outline: none;
+ padding: 1em 2.3em;
+ text-align: center;
+ text-decoration: none;
+ transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+ user-select: none;
+ -webkit-user-select: none;
+ touch-action: manipulation;
+ will-change: transform;
+}
+
+/* Preserve original compact size for the "Try Now" navbar button */
+a.navbar__cta {
+ min-height: auto !important;
+ padding: 0.45em 1.25em !important;
+ font-size: 14px !important;
+ border-radius: var(--radius-full, 9999px) !important;
+}
+
+/* Ensure Start Detecting and Learn More have identical border styling */
+.hero__cta--primary,
+.hero__cta--secondary {
+ border: 0.125em solid #00ff88 !important;
+}
+
+button:disabled,
+.upload__detect-btn:disabled {
+ pointer-events: none;
+ opacity: 0.5;
+}
+
+button:not(.navbar__hamburger):hover:not(:disabled),
+a.hero__cta:hover,
+a.navbar__cta:hover,
+.upload__detect-btn:not(:disabled):hover,
+.upload__reset-btn:hover,
+.upload__button:hover {
+ color: #00ff88 !important;
+ background-color: #1A1A1A !important;
+ border-color: #00ff88 !important;
+ box-shadow: rgba(0, 255, 136, 0.25) 0 4px 8px !important;
+ transform: translateY(-2px) !important;
+}
+
+button:not(.navbar__hamburger):hover:not(:disabled) *,
+a.hero__cta:hover *,
+a.navbar__cta:hover *,
+.upload__detect-btn:not(:disabled):hover *,
+.upload__reset-btn:hover *,
+.upload__button:hover * {
+ color: #00ff88 !important;
+ stroke: #00ff88 !important;
+}
+
+button:not(.navbar__hamburger):active:not(:disabled),
+a.hero__cta:active,
+a.navbar__cta:active,
+.upload__detect-btn:not(:disabled):active,
+.upload__reset-btn:active,
+.upload__button:active {
+ box-shadow: none !important;
+ transform: translateY(0) !important;
+}
+
 @media (max-width: 768px) {
   :root {
     --text-5xl: 2.5rem;
@@ -273,3 +362,4 @@ ul, ol {
     --text-4xl: 1.75rem;
   }
 }
+

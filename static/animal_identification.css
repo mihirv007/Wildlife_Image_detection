@@ -1,8 +1,17 @@
+@import url('https://api.fontshare.com/v2/css?f[]=supreme@400,500,600,700&f[]=chubbo@500,600,700,800&display=swap');
+
+body {
+    font-family: 'Supreme', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Chubbo', sans-serif;
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;    
 }
 
 body{

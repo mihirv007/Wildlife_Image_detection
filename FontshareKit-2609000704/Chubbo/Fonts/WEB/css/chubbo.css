@@ -1,0 +1,22 @@
+/**
+* @license
+*
+* Font Family: Chubbo
+* Designed by: Rafał Buchner
+* URL: https://www.fontshare.com/fonts/chubbo
+* © 2026 Indian Type Foundry
+*
+* Chubbo Bold 
+
+*
+*/
+@font-face {
+  font-family: 'Chubbo-Bold';
+  src: url('../fonts/Chubbo-Bold.woff2') format('woff2'),
+       url('../fonts/Chubbo-Bold.woff') format('woff'),
+       url('../fonts/Chubbo-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
